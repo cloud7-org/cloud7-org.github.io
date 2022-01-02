@@ -1,0 +1,13 @@
+[package]
+name = "wasm-module"
+version = "0.1.0"
+authors = ["PAR"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+base64 = "0.13"
+serde = { version = "1.0", features = ["derive"] }
+wasm-bindgen = { version = "0.2", features = ["serde-serialize"] }

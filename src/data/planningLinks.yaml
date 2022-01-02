@@ -1,0 +1,30 @@
+- href: http://www.airnav.com/airport/KFCM
+  label: KFCM Airport Info
+  detail: via AirNav
+- href: https://www.fltplan.com/
+  label: FlightPlan
+  detail: Flight Planning Resource
+- href: https://skyvector.com/
+  label: Sky Vector
+  detail: Online Charts
+- href: https://www.aopa.org/travel/aopa-flight-planner
+  label: AOPA
+  detail: Flight Planning via AOPA
+- href: https://www.foreflight.com/
+  label: ForeFlight
+  detail: Reccomended EFB
+- href: http://www.aviationweather.gov/
+  label: Aviation Weather
+  detail: Aviation Weather
+- href: http://www.flightaware.com/
+  label: Flight Aware
+  detail: Live Flight Tracking
+- href: https://www.usgs.gov/products/maps/overview
+  label: USGS Maps
+  detail: United States Geography
+- href: https://www.eaa.org/en/airventure
+  label: Air Venture
+  detail: EAA Air Venture
+- href: http://www.fly2lunch.com/
+  label: Fly 2 lunch
+  detail: Meetup Website

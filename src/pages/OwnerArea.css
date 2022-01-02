@@ -1,0 +1,8 @@
+.owner-area ul{
+    padding-left: 1rem;
+}
+
+.owner-area ul li {
+    user-select: none;
+    list-style-type: none;
+}

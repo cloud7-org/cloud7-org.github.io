@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;700&display=swap');
+
+:root {
+  --bg-blue: 16, 31, 42;
+  --light-blue: 215, 232, 249;
+  --sky-blue: rgb(69, 132, 180);
+}
+
+body {
+  font-family: 'Hind', sans-serif;  
+  background: var(--sky-blue);
+  background: linear-gradient(0deg, var(--sky-blue) 0%, rgb(30,72,119) 100%);
+}
+
+body, #root {
+  min-height: 100vh;
+}
+
+footer {
+  background-color: #98ab35;
+}
+
+nav img { height: 54px; }
+
+picture img {
+  max-width: 100%;
+  height: auto;
+}
+
+[data-honey] {
+  z-index: -1;
+  position: absolute;
+}
+
+.absolute-gutter-fill {
+  top: 0; 
+  bottom: 0; 
+  left: calc(var(--bs-gutter-x) * 0.5);
+  right: calc(var(--bs-gutter-x) * 0.5);
+}
+  
+.absolute-fill {
+  top: 0; 
+  bottom: 0; 
+  left: 0;
+  right: 0;
+}
+
+.bg-light-blue {
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(var(--light-blue), 1) 0%, rgba(239, 246, 252, 1) 100%);
+}
+
+.btn-outline-grass {
+  color: white;
+  border-color: white;
+}
+
+.main-content>div {
+  background-color: rgb(var(--bg-blue));
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.drop-cap:first-letter {
+  float: left;
+  font-size: 3em;
+  line-height: 0.8;
+  padding-top: 6px;
+  padding-right: 4px;
+}
+
+.fade-to-dark {
+  background: rgb(var(--bg-blue));
+  background: linear-gradient(180deg, rgba(var(--bg-blue),0) 0%, rgba(var(--bg-blue), 0.75) 75%);
+}
+
+.faded-dark {
+  background: rgba(var(--bg-blue), 0.75);
+}
+
+.fg-blue {
+  color: rgb(var(--bg-blue));
+}
+
+.measure-ref {
+  white-space: pre;
+  z-index: -1;
+  position: absolute;
+  font-family: 'Hind';
+}
+
+.opacity-three-quarters {
+  opacity: 0.75;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+}
+
+.lift {
+  box-shadow: 3px 3px 3px rgb(var(--bg-blue));
+  z-index: 2;
+}
+
+.root-overlay {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.shadowed-text {
+  text-shadow: 0px 0px 5px rgb(var(--bg-blue));
+}
+
+.underline-on-hover:hover {
+  text-decoration: underline;
+}
+
+@keyframes flying-animation {
+  from {
+      transform:translateY(0px);
+  }
+  25% {
+      transform:translateY(-10px);
+  }
+  75% {
+      transform:translateY(10px);
+  }
+  to {
+      transform:translateY(0px);
+  }
+}
+
+.flying-animation {
+  display: inline-block;
+  animation-name: flying-animation;
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;   
+}
+
+[aria-current=page]{
+  font-weight: bold;
+}
+
+@media (max-width: 768px){
+  html { font-size: 0.75em; }
+}

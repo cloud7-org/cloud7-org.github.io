@@ -1,0 +1,16 @@
+.visually-satisfying-link-section div div {
+    display: flex;
+}
+
+.visually-satisfying-link-section div span {
+    flex: 1;
+}
+
+.visually-satisfying-link-section div div span:first-of-type {
+    text-align: right;
+    padding-right: 5px;
+}
+
+.visually-satisfying-link-section div div span:last-of-type {
+    padding-left: 5px;
+}

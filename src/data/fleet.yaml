@@ -1,0 +1,44 @@
+byType:
+  C210: &C210
+      name: 210 Centurion
+      type: C210
+      about: The Cessna 210 Centurion is a six-seat, high-performance, retractable-gear
+        single-engined aircraft built to haul a massive payload at incredible speed.
+      speed: 165
+      range: 850
+      payload: 1,002 lbs.
+  C182: &C182
+    name: 182 Skylane
+    type: C182
+    about: The Cessna 182 Skylane is a four-seat, single-engined airplane.  Its rugged
+      airframe makes it an exceptionally well rounded aircraft.
+    speed: 135
+    range: 650
+    payload: 830 lbs.
+  C172: &C172
+    name: 172 Skyhawk
+    type: C172
+    about: The Cessna 172 Skyhawk is a four-seat, single-engine, high-wing aircraft.  Its
+      stable, predictable and safe design make it an ideal trainer and time builder.
+    speed: 110
+    range: 430
+    payload: 640 lbs.
+byPlane:
+  N65045: 
+    <<: *C172
+    year: 82
+  N54589: 
+    <<: *C172
+    year: 81
+  N96418:
+    <<: *C182
+    year: 78
+  N735LL:
+    <<: *C182
+    year: 77
+  N6039N:
+    <<: *C210
+    year: 78
+  N761SP:
+    <<: *C210
+    year: 78

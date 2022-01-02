@@ -1,0 +1,29 @@
+certificates:
+  pilot:
+    none: None
+    private: Private
+    commercial: Commercial
+    atp: ATP
+  instructor:
+    cfi: CFI
+    cfii: CFII
+    mei: MEI
+ratings:
+  glider: Glider
+  intrument: Instrument
+  multi-engine-land: MEL
+  single-engine-sea: SES
+  multi-engine-sea: MES
+testamonials:
+- from: John O'Shaughnessy
+  text: Cloud 7 is a huge part of my life. Having a cost effective fleet of six aircraft
+    with a range of capabilities at my disposal can’t be beat. Flying puts a smile
+    on my face that sticks around well after the plane is back in the hangar.
+- from: Paige Rudnick
+  text: Cloud 7 has been a fantastic place to grow as a pilot. I joined as a low time
+    private then worked my way up with the help of club instructors, and planes to
+    become an instructor myself.
+- from: Mitch Anderson
+  text: A great selection of well equipped airplanes at a fraction of the cost of
+    owning. How can you beat that?
+alert: 'Notice: There are no shares available at this time, but we can put you on a waiting list.'
