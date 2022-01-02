@@ -7,6 +7,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const TerserWebpackPlugin = require("terser-webpack-plugin");
 const CssMinimizerWebpackPlugin = require("css-minimizer-webpack-plugin");
 const HtmlReplaceWebpackPlugin = require('html-replace-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin');
 
 const envVars = Object.entries(process.env).map(([key, value]) => {return {pattern: `%${key}%`, replacement: value};});
 
@@ -89,6 +90,14 @@ module.exports = function(_env, argv) {
       new webpack.DefinePlugin({
         "process.env.NODE_ENV": JSON.stringify(isProduction ? "production" : "development"),
         "process.env.APP_API": JSON.stringify(process.env.APP_API)
+      }),
+      new CopyPlugin({
+        patterns: [
+          { from: 'public/images', to: 'images' },
+          { from: 'public/favicon.svg', to: 'favicon.svg' },
+          { from: 'public/robots.txt', to: 'robots.txt' },
+          { from: 'public/manifest.json', to: 'manifest.json' }
+        ]
       })
     ].filter(Boolean),
     optimization: {
