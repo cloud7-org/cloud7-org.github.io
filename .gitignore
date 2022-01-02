@@ -127,3 +127,5 @@ dist
 .pnp.*
 
 src/wasm/target/
+
+.DS_Store
