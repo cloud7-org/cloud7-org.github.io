@@ -5,8 +5,11 @@ const {byPlane, byType} = fleet;
 
 for(const key of Object.keys(byPlane)){
     let plane = byPlane[key];
+    let {speed} = plane;
     plane = {...plane, ...plane["<<"]}
     delete plane["<<"];
+    if(speed)
+        plane.speed = speed;
     byPlane[key] = plane;
 }
 

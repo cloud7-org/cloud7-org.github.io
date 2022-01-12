@@ -1,15 +1,16 @@
 club:
   fuelReimbursement: '$4.85'
-  monthlyDues: '$170'
+  monthlyDues: '$182'
   sharePrice: '$7,000'
 byType:
-  - &C172 92
-  - &C182 138
-  - &C210 178
+  - &C172 93
+  - &C182 137
+  - &C182+ 162
+  - &C210 176
 byPlane:
   N65045: *C172
   N54589: *C172
   N735LL: *C182
-  N96418: *C182
+  N96418: *C182+
   N6039N: *C210
   N761SP: *C210
