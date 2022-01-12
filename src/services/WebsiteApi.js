@@ -10,12 +10,13 @@ class WebsiteApi {
         const headers = {Authorization: `Basic ${hashed}`};
         try
         {
-            const {ok} = await fetch('login', { headers, credentials: 'include' });
+            const {ok} = await RestClient.doGet('login', { headers, credentials: 'include' });
             if(ok)
                 RestClient.headers = headers;
 
             return ok;
-        } catch {
+        } catch(e) {
+            console.log(e);
             return false;
         }
     }

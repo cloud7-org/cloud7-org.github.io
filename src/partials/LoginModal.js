@@ -32,8 +32,8 @@ const LoginModal = (props) => {
             EventDispatcher.trigger(EventDispatcher.LOGGED_IN);
             navigate('/owner/files');
         } else {
-            modal.classList.add('animate__shakeX');
-            one(modRef.current, 'animationend', () => modal.classList.remove('animate__shakeX'));  
+            modalRef.current.classList.add('animate__shakeX');
+            one(modalRef.current, 'animationend', () => modalRef.current.classList.remove('animate__shakeX'));  
         }
     }
 

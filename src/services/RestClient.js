@@ -11,8 +11,8 @@ const getHeaders = () => JSON.parse(window.sessionStorage.getItem('api-headers')
 const makeUrl = (path) => `${api}/${path}`
 
 class RestClient {    
-    static doGet = (path) => {
-        const config = RestClient.hasHeaders ? { headers: getHeaders(), credentials: 'include' } : null;
+    static doGet = (path, withHeaders = null) => {
+        const config =  RestClient.hasHeaders ? { headers: getHeaders(), credentials: 'include' } : withHeaders;
         return fetch(makeUrl(path), config);
     }
 

@@ -42,7 +42,7 @@ const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(WebsiteApi.canAccess);
 
   useEffect(() => {
-    const callback = () => setIsLoggedIn(FileService.canAccess);
+    const callback = () => setIsLoggedIn(WebsiteApi.canAccess);
     EventDispatcher.listen(EventDispatcher.LOGGED_IN, callback);
     return () => EventDispatcher.deafen(EventDispatcher.LOGGED_IN, callback);
   });
