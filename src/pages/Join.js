@@ -20,6 +20,8 @@ const Join = () => {
         if(sentStarted || !timeoutElapsed)
             return;
         
+        const cmd = e.target.querySelector('button');
+        cmd.disabled = true;        
         sentStarted = true;
 
         const getValues = (key) => [...e.target[key]].filter(c => c.checked).map(c => c.value);
@@ -41,6 +43,7 @@ const Join = () => {
             setSentEmail(true);
         }catch(e) {
             sentStarted = false;
+            cmd.disabled = false;
             alert("Unable to send e-mail. Please try again later.");
         }
     }
