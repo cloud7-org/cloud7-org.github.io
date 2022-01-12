@@ -70,6 +70,7 @@ const App = () => {
             {routes}
             {isLoggedIn && Navigation.ownerArea.map(makeRoute)}
             <Route element={<Navigate to="/" />}/>
+            <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </div>
       </div>

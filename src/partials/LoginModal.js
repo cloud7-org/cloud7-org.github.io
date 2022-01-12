@@ -21,13 +21,13 @@ const LoginModal = (props) => {
     const navigate = useNavigate();
     
     const login = async () => {
-        const modal = new bootstrap.Modal(modalRef.current);
         const form = formRef.current;
         const honey = form.elements['login-nickname'].value;
         const username = form.elements['login-name'].value;
         const password = form.elements['login-password'].value;
         
         if(!honey && await WebsiteApi.login(username, password)) {
+            const modal = bootstrap.Modal.getOrCreateInstance(modalRef.current);
             modal.hide();
             EventDispatcher.trigger(EventDispatcher.LOGGED_IN);
             navigate('/owner/files');
@@ -53,7 +53,7 @@ const LoginModal = (props) => {
         }
     });    
 
-    return <div className="modal fade animate__animated" ref={modalRef} id={jqId} tabIndex="-1" role="dialog" aria-hidden="true">
+    return <div className="modal fade animate__animated" ref={modalRef} id={jqId} data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div className="modal-dialog modal-dialog-centered" role="document">
             <div className="modal-content">
                 <div className="modal-header">
