@@ -47,7 +47,7 @@ const Home = () => {
             </ImageBox>
         </div>
         <div className="row no-gutters pt-3">
-            <ImageBox image="clubroom">
+            <ImageBox image="meetingroom">
                 <FieldSet title="Our Facilities">
                     <div className="d-flex h-100 justify-content-end">
                         <div className="p-2 align-self-end">
@@ -55,7 +55,7 @@ const Home = () => {
                                 <div>We own two hangars at Flying Cloud Airport that include the following features:</div>
                                     <ul>
                                         <li>A Heated Maintenance Bay</li>
-                                        <li>A Clubroom Equipped With:
+                                        <li>A Meeting Room Equipped With:
                                             <ul>
                                                 <li>Internet &amp; Wi-Fi</li>
                                                 <li>Computer</li>

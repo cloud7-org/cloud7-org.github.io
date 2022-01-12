@@ -2,7 +2,7 @@
   "name": "cloud-7-website",
   "version": "1.0.0",
   "description": "Homepage for Twin Cities Cloud 7",
-  "homepage": "http://c7-flyingclub.github.io.github.io",
+  "homepage": "http://cloud7-org.github.io.github.io",
   "private": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

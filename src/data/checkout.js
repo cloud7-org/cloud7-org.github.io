@@ -16,7 +16,7 @@ const c172 = {
     elements: [
         { id: 'c172', type: 'round-rectangle', label: 'Cessna\n172', row: 0, col: 1, ...Color.start},
         { id: 'ppl', type: 'diamond', label: 'Pilot holds\na Private Pilot\nor more adavanced\ncertificate?', row: 1, col: 1},
-        { id: 'student', type: 'diamond', label: 'Is the pilot\na Student\nClub Owner?', row: 2, col: 1},
+        { id: 'student', type: 'diamond', label: 'Is the pilot\na Student\nOwner?', row: 2, col: 1},
         { id: 'no', type: 'round-rectangle', label: 'Cannot\nCheckout', row: 2, col: 2, ...Color.no},
         { id: 'yes', type: 'round-rectangle', label: 'Can\nCheckout', row: 2, col: 0, ...Color.yes},
         { source: 'c172', target: 'ppl', label: '' },
@@ -47,7 +47,7 @@ const c182 = {
         { id: 'pic', type: 'rectangle', label: 'Has ≥ 5Hrs PIC\nin a C182Q', row: 2, col: 0},
 
         //right
-        { id: 'chief', type: 'rectangle', label: 'Recommended by\nclub CFI & Chief Pilot', row: 1, col: 2},
+        { id: 'chief', type: 'rectangle', label: 'Recommended by\norg. CFI & Chief Pilot', row: 1, col: 2},
         { id: 'training', type: 'rectangle', label: 'Completed a course\nof dual training\nprescribed by\nthe Chief Pilot.', row: 2, col: 2 },
 
         //Decision
@@ -101,7 +101,7 @@ const c210 = {
         { id: '10Hrs-instr', type: 'diamond', label: 'Has 10 hours\ntraining including 15\ntakeoffs & landings', row: 2, col: 1},
 
         //Endorsement Way (right)
-        { id: 'chief', type: 'rectangle', label: 'Recommended by\nclub CFI & Chief Pilot', row: 1, col: 3},
+        { id: 'chief', type: 'rectangle', label: 'Recommended by\norg. CFI & Chief Pilot', row: 1, col: 3},
         { id: 'training', type: 'rectangle', label: 'Completed a course\nof dual training\nprescribed by\nthe Chief Pilot.', row: 2, col: 3 },
         { id: 'decision-endorsement', type: 'diamond', label: 'Are both\nrequirements\nsatisfied?', row: 3, col: 3 },
 
