@@ -25,7 +25,7 @@ const Home = () => {
                                         <td>Aircraft</td>
                                         <td>Speed (kts)</td>
                                         <td>Range (NM)</td>
-                                        <td>Rate/HR</td>
+                                        <td>Owner Hourly Cost/HR</td>
                                         <td>Cost/NM</td>
                                     </tr>
                                 </thead>
