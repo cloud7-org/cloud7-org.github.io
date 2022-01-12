@@ -36,7 +36,7 @@ const About = () => {
                             <tr className="fw-bold">
                                 <td>Aircraft</td>
                                 <td>Type</td>
-                                <td>Onwer Hourly Cost</td>
+                                <td>Owner Hourly Cost</td>
                             </tr>
                         </thead>
                         <tbody>
