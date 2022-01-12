@@ -97,7 +97,7 @@ module.exports = function(_env, argv) {
           { from: 'public/favicon.svg', to: 'favicon.svg' },
           { from: 'public/robots.txt', to: 'robots.txt' },
           { from: 'public/manifest.json', to: 'manifest.json' },
-          { from: '404.html', to: '404.html' }
+          { from: 'public/404.html', to: '404.html' }
         ]
       })
     ].filter(Boolean),
