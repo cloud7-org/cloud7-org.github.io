@@ -29,14 +29,14 @@ const About = () => {
                     <HotelLaneMap/>
                     <HorizontalHeadingRule title="Ownership Costs"/>
                     <p>Initial Fees: Equity Share – {Rates.sharePrice} (Please <a alt="Join" href="/join">Contact Us</a> to be placed on the waiting list)</p>
-                    <p>Monthly dues – {Rates.monthlyDues}/month</p>
+                    <p>Owners' Fixed Cost – {Rates.monthlyDues}/month</p>
                     <p>Flight time is calculated on tach hours and the hourly rates are wet (includes fuel):</p>        
                     <table className="table">
                         <thead>
                             <tr className="fw-bold">
                                 <td>Aircraft</td>
                                 <td>Type</td>
-                                <td>Rate/HR</td>
+                                <td>Owner Hourly Cost</td>
                             </tr>
                         </thead>
                         <tbody>
