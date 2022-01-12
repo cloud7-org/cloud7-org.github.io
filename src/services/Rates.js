@@ -16,9 +16,9 @@ class Rates {
         return `$${(timeFor1Nm * rate).toFixed(2)}`;
     }
 
-    static get fuelReimbursement() { return rates.club.fuelReimbursement; }
-    static get monthlyDues() { return rates.club.monthlyDues; }
-    static get sharePrice() { return rates.club.sharePrice; }
+    static get fuelReimbursement() { return rates.orginization.fuelReimbursement; }
+    static get monthlyDues() { return rates.orginization.monthlyDues; }
+    static get sharePrice() { return rates.orginization.sharePrice; }
 }
 
 export default Rates;

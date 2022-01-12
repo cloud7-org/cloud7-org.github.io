@@ -13,7 +13,7 @@ const About = () => {
             <ImageBox image="N65045">
                 <HeaderText
                     title="About Us"
-                    detail="Twin City Cloud 7, Inc. is Minnesota’s leading flying Club, founded in 1966 by seven pilots with one Skyhawk. The purpose then to now has been to provide well-equipped, professionally maintained aircraft at a reasonable cost per hour."
+                    detail="Twin City Cloud 7, Inc. is Minnesota’s leading flying orginization, founded in 1966 by seven pilots with one Skyhawk. The purpose then to now has been to provide well-equipped, professionally maintained aircraft at a reasonable cost per hour."
                 />   
             </ImageBox>
         </div>
@@ -23,9 +23,9 @@ const About = () => {
                     <HorizontalHeadingRule title="History"/>
                     <p className="drop-cap">Through the years the officers, and directors have increased the owner’s equity while constantly improving the equipment to the present fleet of two Cessna 172 Skyhawks, two C182 Skylanes, and two C210 Centurions.</p>
                     <p>By utilizing the aircraft to the fullest, and by close control of maintenance without sacrificing quality, costs have been held to below what lesser equipped planes cost to rent from other sources.</p>
-                    <p>Ownership varies. New faces appear while old ones leave. Of the ones that leave the most quoted reason for leaving the Club is relocation to another area. The number two reason for selling a share is the purchase of a private airplane by one or two people, a goal many would like to attain but with costs rising so rapidly ownership by way of a club is the only reasonable alternative. Rarely have we heard of anyone leaving because of dissatisfaction with the club or the equipment. In fact many who have left because of a move have rejoined when they returned to the Twin Cities which is the best testimonial we can think of.</p>
+                    <p>Ownership varies. New faces appear while old ones leave. Of the ones that leave the most quoted reason for leaving the orginization is relocation to another area. The number two reason for selling a share is the purchase of a private airplane by one or two people, a goal many would like to attain but with costs rising so rapidly ownership by way of a orginization like Cloud 7 is the only reasonable alternative. Rarely have we heard of anyone leaving because of dissatisfaction with the orginization or the equipment. In fact many who have left because of a move have rejoined when they returned to the Twin Cities which is the best testimonial we can think of.</p>
                     <HorizontalHeadingRule title="Location"/>
-                    <p>Twin Cities Cloud 7 Flying Club is located at the Flying Cloud Airport in Eden Prairie, MN.</p>
+                    <p>Twin Cities Cloud 7 is located at the Flying Cloud Airport in Eden Prairie, MN.</p>
                     <HotelLaneMap/>
                     <HorizontalHeadingRule title="Ownership Costs"/>
                     <p>Initial Fees: Equity Share – {Rates.sharePrice} (Please <a alt="Join" href="/join">Contact Us</a> to be placed on the waiting list)</p>

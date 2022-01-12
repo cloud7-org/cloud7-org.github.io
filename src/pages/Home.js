@@ -10,7 +10,7 @@ const Home = () => {
             <ImageBox image="header">
                 <HeaderText
                     title="Twin City Cloud 7"
-                    detail="With a fleet of six meticulously maintained and updated Cessna aircraft, the Minneapolis flying club Cloud 7 is based at the Flying Cloud Airport (KFCM) in Eden Prairie, MN.  Cloud 7 is the perfect place for new pilots through seasoned career pilots."
+                    detail="With a fleet of six meticulously maintained and updated Cessna aircraft, the Minneapolis flying orginization Cloud 7 is based at the Flying Cloud Airport (KFCM) in Eden Prairie, MN.  Cloud 7 is the perfect place for new pilots through seasoned career pilots."
                 />   
             </ImageBox>
         </div>
