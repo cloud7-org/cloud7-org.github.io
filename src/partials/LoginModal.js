@@ -74,7 +74,7 @@ const LoginModal = (props) => {
                         </div>
                         <div className="form-group">
                             <label htmlFor="password">Password</label>
-                            <input type="password" className="form-control" id="login-password" name="password" placeholder="E-Mail" autoComplete="off" onKeyPress={submitOnEnter}/>
+                            <input type="password" className="form-control" id="login-password" name="password" placeholder="Password" autoComplete="off" onKeyPress={submitOnEnter}/>
                         </div>
                     </form>
                 </div>
