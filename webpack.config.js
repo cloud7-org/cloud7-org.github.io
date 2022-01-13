@@ -98,7 +98,7 @@ module.exports = function(_env, argv) {
           { from: 'public/robots.txt', to: 'robots.txt' },
           { from: 'public/manifest.json', to: 'manifest.json' },
           { from: 'public/404.html', to: '404.html' },
-          { from: 'public/CNAME', to: 'CNAME' }
+          { from: 'public/CNAME' }
         ]
       })
     ].filter(Boolean),
