@@ -17,6 +17,7 @@ const LoginModal = (props) => {
     const {jqId} = props;
     const modalRef = useRef();
     const formRef = useRef();
+    const cmdLoginRef = useRef();
     const loginNameRef = useRef();
     const navigate = useNavigate();
     
@@ -26,6 +27,8 @@ const LoginModal = (props) => {
         const username = form.elements['login-name'].value;
         const password = form.elements['login-password'].value;
         
+        cmdLoginRef.current.disabled = true;
+
         if(!honey && await WebsiteApi.login(username, password)) {
             const modal = bootstrap.Modal.getOrCreateInstance(modalRef.current);
             modal.hide();
@@ -35,6 +38,8 @@ const LoginModal = (props) => {
             modalRef.current.classList.add('animate__shakeX');
             one(modalRef.current, 'animationend', () => modalRef.current.classList.remove('animate__shakeX'));  
         }
+        
+        cmdLoginRef.current.disabled = false;
     }
 
     const submitOnEnter = (e) => {
@@ -75,7 +80,7 @@ const LoginModal = (props) => {
                 </div>
                 <div className="modal-footer">
                     <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" className="btn btn-primary" onClick={login}>Submit</button>
+                    <button type="button" className="btn btn-primary" onClick={login} ref={cmdLoginRef}>Submit</button>
                 </div>
             </div>
         </div>
