@@ -22,21 +22,21 @@ const Home = () => {
                             <table className="table overlay text-white text-center m-0">
                                 <thead>
                                     <tr className="fw-bold">
-                                        <td>Aircraft</td>
-                                        <td>Speed (kts)</td>
-                                        <td>Range (NM)</td>
-                                        <td>Owner Hourly Cost/HR</td>
-                                        <td>Cost/NM</td>
+                                        <td className="p-1">Aircraft</td>
+                                        <td className="p-1">Speed (kts)</td>
+                                        <td className="p-1">Range (NM)</td>
+                                        <td className="p-1">Owner Hourly Cost/HR</td>
+                                        <td className="p-1">Cost/NM</td>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {[...getFleetData()].map((plane, key) => {
                                         return <tr key={key}>
-                                            <td>{plane.tailNumber}</td>
-                                            <td>{plane.speed}</td>
-                                            <td>{plane.range}</td>
-                                            <td>{plane.rate}</td>
-                                            <td>{plane.costPerNm}</td>
+                                            <td className="p-1">{plane.tailNumber}</td>
+                                            <td className="p-1">{plane.speed}</td>
+                                            <td className="p-1">{plane.range}</td>
+                                            <td className="p-1">{plane.rate}</td>
+                                            <td className="p-1">{plane.costPerNm}</td>
                                         </tr>
                                     })}
                                 </tbody>
