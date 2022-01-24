@@ -33,7 +33,7 @@ byPlane:
   N96418:
     <<: *C182
     year: 78
-    speed: 165
+    speed: 160
   N735LL:
     <<: *C182
     year: 77
