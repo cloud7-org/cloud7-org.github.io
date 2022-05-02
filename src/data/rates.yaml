@@ -3,10 +3,10 @@ orginization:
   monthlyDues: '$182'
   sharePrice: '$7,000'
 byType:
-  - &C172 102
-  - &C182 151
+  - &C172 103
+  - &C182 152.50
   - &C182+ 176
-  - &C210 192
+  - &C210 193.50
 byPlane:
   N65045: *C172
   N54589: *C172
