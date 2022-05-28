@@ -15,7 +15,7 @@ const components = {
 function processCheckout() {
     return (tree) => {
         visit(tree, 'text', (node) => {
-            const result = node.value.match(/\[checkout type=['|"](c\d\d\d)['|"]\]/);
+            const result = node.value.match(/\[checkout type=['|"](c\d\d\d)['|"]\]/) || node.value.match(/\[checkout type=['|"](n\w\w\w\w\w)['|"]\]/);
             if(result && result.length === 2){
                 node.type = 'element';
                 node.tagName = 'checkout';

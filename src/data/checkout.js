@@ -28,7 +28,7 @@ const c172 = {
 };
 
 
-const c182 = {
+const n735LL = {
     gridLayout: {
         rows: 4,
         cols: 3
@@ -39,7 +39,7 @@ const c182 = {
     },
     elements: [
         //start
-        { id: 'c182', type: 'round-rectangle', label: 'Cessna\n182', row: 0, col: 1, ...Color.start},
+        { id: 'n735LL', type: 'round-rectangle', label: 'N735LL (Cessna 182)', row: 0, col: 1, ...Color.start},
         { id: 'ppl', type: 'diamond', label: 'Pilot holds\na Private Pilot\nor more adavanced\ncertificate?', row: 1, col: 1},
         
         //left
@@ -59,7 +59,7 @@ const c182 = {
         { id: 'yes', type: 'round-rectangle', label: 'Can\nCheckout', row: 3, col: 1, ...Color.yes},
 
         //edges
-        { source: 'c182', target: 'ppl', label: '' },
+        { source: 'n735LL', target: 'ppl', label: '' },
         { source: 'ppl', target: '100hrs', label: 'Yes' },
         { source: 'ppl', target: 'chief', label: 'Yes' },
         { source: 'ppl', target: 'no', label: 'No' },
@@ -71,6 +71,61 @@ const c182 = {
         { source: 'decision-left', target: 'no', label: 'No', curveStyle: 'bezier' },
         { source: 'decision-right', target: 'yes', label: 'Yes' },
         { source: 'decision-left', target: 'yes', label: 'Yes' }
+    ]
+};
+
+const n96418 = {
+    gridLayout: {
+        rows: 4,
+        cols: 3
+    },
+    padding:{
+        width: 150,
+        height: 100
+    },
+    elements: [
+        //start
+        { id: 'n96418', type: 'round-rectangle', label: 'N96418 (Cessna 182)', row: 0, col: 0, ...Color.start},
+        { id: 'ppl', type: 'diamond', label: 'Pilot holds\na Private Pilot\nor more adavanced\ncertificate?', row: 1, col: 1},
+        
+        //left
+        { id: '125hrs', type: 'rectangle', label: 'Has ≥ 125Hrs PIC', row: 1, col: 0 },
+        { id: 'pic', type: 'rectangle', label: 'Has ≥ 25Hrs of\nHigh Performance PIC time /\n≥ 5hrs flying G3X or similar glass.', row: 2, col: 0},
+
+        //right
+        { id: 'chief', type: 'rectangle', label: 'Recommended by\norg. CFI & Chief Pilot', row: 1, col: 2},
+        { id: 'training', type: 'rectangle', label: 'Completed a course\nof dual training\nprescribed by\nthe Chief Pilot.', row: 2, col: 2 },
+
+        { id: 'c210', type: 'diamond', label: 'Checked out\nin C210?', row: 0, col: 1},
+
+        //Decision
+        { id: 'decision-left', type: 'diamond', label: 'Are both\nrequirements\nsatisfied?', row: 3, col: 0 },
+        { id: 'decision-right', type: 'diamond', label: 'Are both\nrequirements\nsatisfied?', row: 3, col: 2 },
+
+        //ends
+        { id: 'no', type: 'round-rectangle', label: 'Cannot\nCheckout', row: 2, col: 1, ...Color.no},
+        { id: 'yes', type: 'round-rectangle', label: 'Can\nCheckout', row: 3, col: 1, ...Color.yes},
+        { id: 'c210yes', type: 'round-rectangle', label: 'Can\nCheckout', row: 0, col: 2, ...Color.yes},
+
+        //edges
+        { source: 'n96418', target: 'c210', label: '' },
+        { source: 'c210', target: 'ppl', label: 'No' },
+        { source: 'c210', target: 'c210yes', label: 'Yes' },
+        { source: 'ppl', target: '125hrs', label: 'Yes' },
+        { source: 'ppl', target: 'chief', label: 'Yes' },
+        { source: 'ppl', target: 'no', label: 'No' },
+        { source: '125hrs', target: 'pic', label: 'And' },
+        { source: 'pic', target: 'decision-left', label: '' },
+        { source: 'chief', target: 'training', label: 'And' },
+        { source: 'training', target: 'decision-right', label: '' },
+        { source: 'decision-right', target: 'no', label: 'No', curveStyle: 'bezier' },
+        { source: 'decision-left', target: 'no', label: 'No', curveStyle: 'bezier' },
+        { source: 'decision-right', target: 'yes', label: 'Yes' },
+        { source: 'decision-left', target: 'yes', label: 'Yes' },
+        { source: 'decision-right', target: 'yes', label: 'Yes' },
+        { source: 'decision-right', target: 'yes', label: 'Yes' },
+        { source: 'decision-left', target: 'yes', label: 'Yes' }
+
     ]
 };
 
@@ -136,5 +191,5 @@ const c210 = {
     ]
 };
 
-const checkouts = { c172, c182, c210 }
+const checkouts = { c172, n735LL, n96418, c210 }
 export default checkouts;
