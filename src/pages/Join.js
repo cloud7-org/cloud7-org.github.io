@@ -50,7 +50,7 @@ const Join = () => {
 
     return (<>
        <div className="row no-gutters">
-            <ImageBox image="rocky39N">
+            <ImageBox image="210s">
                 <HeaderText
                     title="Join"
                     detail="Send us a message and we will get back to you shortly."
