@@ -5,7 +5,7 @@ const {byPlane, byType} = fleet;
 
 for(const key of Object.keys(byPlane)){
     let plane = byPlane[key];
-    const {speed, type, engine} = plane;
+    const {speed, type, engine, range} = plane;
     plane = {...plane, ...plane["<<"]}
     delete plane["<<"];
     if(speed)
@@ -16,6 +16,9 @@ for(const key of Object.keys(byPlane)){
 
     if(engine)
         plane.engine = engine;
+
+    if(range)
+        plane.range = range;
 
     byPlane[key] = plane;
 }

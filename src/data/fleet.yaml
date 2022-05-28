@@ -39,6 +39,7 @@ byPlane:
     speed: 160
     type: C182+
     engine: IO-550-D
+    range: 600
   N735LL:
     <<: *C182
     year: 77
