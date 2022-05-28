@@ -2,6 +2,7 @@ byType:
   C210: &C210
       name: 210 Centurion
       type: C210
+      engine: IO-520-L
       about: The Cessna 210 Centurion is a six-seat, high-performance, retractable-gear
         single-engined aircraft built to haul a massive payload at incredible speed.
       speed: 165
@@ -10,6 +11,7 @@ byType:
   C182: &C182
     name: 182 Skylane
     type: C182
+    engine: O-470-U
     about: The Cessna 182 Skylane is a four-seat, single-engined airplane.  Its rugged
       airframe makes it an exceptionally well rounded aircraft.
     speed: 135
@@ -18,6 +20,7 @@ byType:
   C172: &C172
     name: 172 Skyhawk
     type: C172
+    engine: O-320-D2J
     about: The Cessna 172 Skyhawk is a four-seat, single-engine, high-wing aircraft.  Its
       stable, predictable and safe design make it an ideal trainer and time builder.
     speed: 110
@@ -34,6 +37,8 @@ byPlane:
     <<: *C182
     year: 78
     speed: 160
+    type: C182+
+    engine: IO-550-D
   N735LL:
     <<: *C182
     year: 77

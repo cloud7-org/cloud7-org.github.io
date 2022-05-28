@@ -36,7 +36,8 @@ const About = () => {
                             <tr className="fw-bold">
                                 <td>Aircraft</td>
                                 <td>Type</td>
-                                <td>Owner Hourly Cost</td>
+                                <td>Engine</td>
+                                <td>Hourly Cost</td>
                             </tr>
                         </thead>
                         <tbody>
@@ -44,6 +45,7 @@ const About = () => {
                                 return <tr key={key}>
                                     <td>{plane.tailNumber}</td>
                                     <td>{plane.name}</td>
+                                    <td>{plane.engine}</td>
                                     <td>{plane.rate}</td>
                                 </tr>
                             })}

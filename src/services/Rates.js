@@ -3,13 +3,17 @@ import {byPlane, byType} from "../services/Fleet.js"
 
 class Rates {
     static perHour = (typeOrTailNumber) => {
-        var src = typeOrTailNumber[0] === 'N' ? rates.byPlane : rates.byType;
-        return `$${src[typeOrTailNumber]}`;
+        const src = typeOrTailNumber[0] === 'N' ? rates.byPlane : rates.byType;
+        let value = src[typeOrTailNumber];
+        if(value.toString().includes("."))
+            value = value.toFixed(2);
+
+        return `$${value}`;
     }
 
     static perNM = (typeOrTailNumber) => {
-        var rSrc = typeOrTailNumber[0] === 'N' ? rates.byPlane : rates.byType;
-        var fSrc = typeOrTailNumber[0] === 'N' ? byPlane : byType;
+        const rSrc = typeOrTailNumber[0] === 'N' ? rates.byPlane : rates.byType;
+        const fSrc = typeOrTailNumber[0] === 'N' ? byPlane : byType;
 
         const rate = rSrc[typeOrTailNumber];
         const timeFor1Nm = 1 / fSrc[typeOrTailNumber].speed;

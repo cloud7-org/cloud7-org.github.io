@@ -19,26 +19,31 @@ const Home = () => {
                 <FieldSet title="Our Fleet">
                     <div className="d-flex h-100">
                         <div className="p-2 align-self-end w-100">
-                            <table className="table overlay text-white text-center m-0">
+                            <table className="table overlay text-white m-0">
                                 <thead>
-                                    <tr className="fw-bold">
+                                    <tr className="fw-bold text-center ">
                                         <td className="p-1">Aircraft</td>
+                                        <td className="p-1">Type</td>
                                         <td className="p-1">Speed (kts)</td>
                                         <td className="p-1">Range (NM)</td>
-                                        <td className="p-1">Owner Hourly Cost/HR</td>
+                                        <td className="p-1">Hourly Cost</td>
                                         <td className="p-1">Cost/NM</td>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {[...getFleetData()].map((plane, key) => {
-                                        return <tr key={key}>
+                                        return <tr key={key} className="text-center">
                                             <td className="p-1">{plane.tailNumber}</td>
+                                            <td className="p-1">{plane.type}</td>
                                             <td className="p-1">{plane.speed}</td>
                                             <td className="p-1">{plane.range}</td>
                                             <td className="p-1">{plane.rate}</td>
                                             <td className="p-1">{plane.costPerNm}</td>
                                         </tr>
                                     })}
+                                    <tr>
+                                        <td colSpan="6"><small className="font-italic">+ Indicates upgraded engine</small></td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
