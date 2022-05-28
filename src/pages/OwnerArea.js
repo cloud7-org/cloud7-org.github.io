@@ -3,6 +3,7 @@ import BlobDownloadLink from '../partials/BlobDownloadLink.js';
 import Markdown from '../partials/Markdown.js';
 import HorizontalHeadingRule from '../partials/HorizontalHeadingRule.js';
 import WebsiteApi from '../services/WebsiteApi.js';
+import Rates from '../services/Rates.js';
 import ownerAreaContent from '../data/ownerAreaContent.yaml'
 import silhouette from '../images/182silhouette.svg';
 import './OwnerArea.css';
@@ -73,6 +74,8 @@ const OwnerArea = () => {
                 {ownerAreaContent.motd}
             </Markdown>
          </>}
+         <HorizontalHeadingRule title="Fuel"/>
+        Off field reimbursement rate is currently <span style={{fontWeight: "bold"}}>{Rates.fuelReimbursement}/gal.</span>
          <HorizontalHeadingRule title="Files"/>
             {fileTree.folders.length && <ul>
                 {fileTree.folders.map((folder, i) => <Folder key={i} current={folder} canClose={false}/>)}

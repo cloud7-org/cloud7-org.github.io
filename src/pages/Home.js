@@ -42,7 +42,7 @@ const Home = () => {
                                         </tr>
                                     })}
                                     <tr>
-                                        <td colSpan="6"><small className="font-italic">+ Indicates upgraded engine</small></td>
+                                        <td colSpan="6"><small>+ Indicates upgraded engine</small></td>
                                     </tr>
                                 </tbody>
                             </table>
