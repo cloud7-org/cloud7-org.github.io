@@ -143,7 +143,7 @@ const c210 = {
 
         //Common start
         { id: 'instrument', type: 'rectangle', label: 'Instrument\nrated?', row: 0, col: 1 },
-        { id: 'lower-checkouts', type: 'rectangle', label: 'Checked out\nin the 172 & 182?', row: 0, col: 2 },
+        { id: 'lower-checkouts', type: 'rectangle', label: 'Checked out\nin the\n172 & 5LL?', row: 0, col: 2 },
         { id: 'decision-first', type: 'diamond', label: 'Are both\nrequirements\nsatisfied?', row: 1, col: 2 },
 
         //By Hours (left)
