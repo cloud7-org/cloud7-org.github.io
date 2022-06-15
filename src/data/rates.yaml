@@ -5,7 +5,7 @@ orginization:
 byType:
   - &C172 106
   - &C182 157
-  - &C182+ 182
+  - &C182+ 187.50
   - &C210 199
 byPlane:
   N65045: *C172
