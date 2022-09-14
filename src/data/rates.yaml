@@ -1,7 +1,7 @@
 orginization:
   fuelReimbursement: '$6.70'
   monthlyDues: '$182'
-  sharePrice: '$7,500'
+  sharePrice: '$12,000'
 byType:
   - &C172 105.50
   - &C182 157.50
