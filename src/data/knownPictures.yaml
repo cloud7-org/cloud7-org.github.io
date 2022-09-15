@@ -6,7 +6,7 @@ N65045:
   height: 336
 N65045_Panel:
   width: 1320
-  height: 990
+  height: 751
 N735LL:
   width: 1320
   height: 402
@@ -21,7 +21,7 @@ N96418:
   height: 874
 N96418_Night:
   width: 1320
-  height: 990
+  height: 656
 fleet:
   width: 1320
   height: 743
