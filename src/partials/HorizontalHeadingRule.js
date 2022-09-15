@@ -41,7 +41,7 @@ const HorizontalHeadingRule = (props) => {
       <text x={titleLeftOffset} 
             y={ruleTopOffset} 
             fill={color}
-            alignmentBaseline="middle" 
+            dominantBaseline="middle" 
             style={{fontSize}}>{title}</text>
     </svg>}
   </div>

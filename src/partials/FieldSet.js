@@ -58,7 +58,7 @@ const FieldSet = (props) => {
 
       <text x={titleLeftOffset} 
             y={borderTopOffset} 
-            alignmentBaseline="middle" 
+            dominantBaseline="middle" 
             style={{fill: color, filter: 'url(#field-set-shadow)', fontSize}}>{title}</text>
       
       <foreignObject {...htmlArea} fill="red">
