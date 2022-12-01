@@ -66,7 +66,7 @@ const Join = () => {
                             {joinData.alert} 
                         </div>}
                         <form ref={formRef} onSubmit={handleSubmit} autoComplete="off">
-                            <input type="text" id="username" name="username" data-usename placeholder="Username"/>
+                            <input type="text" id="username" name="username" data-username placeholder="Username"/>
                             <div className="form-group">
                                 <label htmlFor="name" className="fw-bold">Your Name</label>
                                 <input type="text" className="form-control" id="name" name="name" placeholder="Name" required/>
