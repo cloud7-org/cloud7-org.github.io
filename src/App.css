@@ -27,7 +27,7 @@ picture img {
   height: auto;
 }
 
-[data-honey] {
+[data-username] {
   z-index: -1;
   position: absolute;
 }
