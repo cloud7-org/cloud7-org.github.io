@@ -21,7 +21,7 @@ class Rates {
     }
 
     static get fuelReimbursement() { return rates.orginization.fuelReimbursement; }
-    static get monthlyDues() { return rates.orginization.monthlyDues; }
+    static get monthlyFixed() { return rates.orginization.monthlyFixed; }
     static get sharePrice() { return rates.orginization.sharePrice; }
 }
 
