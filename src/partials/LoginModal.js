@@ -67,7 +67,7 @@ const LoginModal = (props) => {
                 </div>
                 <div className="modal-body">
                     <form ref={formRef} autoComplete="off">
-                        <input type="text" id="login-nickname" name="login-nickname" data-honey placeholder="Gen. Akbar"/>
+                        <input type="text" id="login-nickname" name="login-nickname" data-username placeholder="Gen. Akbar"/>
                         <div className="form-group">
                             <label htmlFor="name">Name</label>
                             <input type="text" className="form-control" ref={loginNameRef} id="login-name" name="name" placeholder="Name" autoComplete="off" autoCapitalize="off"/>
