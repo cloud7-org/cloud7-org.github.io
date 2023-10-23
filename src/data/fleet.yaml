@@ -40,9 +40,9 @@ byPlane:
     type: C182+
     engine: IO-550-D
     range: 600
-  N735LL:
+  N7278X:
     <<: *C182
-    year: 77
+    year: 99
   N6039N:
     <<: *C210
     year: 78
