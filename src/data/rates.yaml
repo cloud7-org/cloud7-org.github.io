@@ -4,7 +4,7 @@ orginization:
   sharePrice: '$12,800'
 byType:
   - &C172 106.50
-  - &C182 159.50
+  - &C182 170.00
   - &C182+ 188
   - &C210 200
 byPlane:
