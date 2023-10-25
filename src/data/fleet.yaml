@@ -14,7 +14,7 @@ byType:
     engine: IO-540-1AB1A5
     about: The Cessna 182 Skylane is a four-seat, single-engined airplane.  Its rugged
       airframe makes it an exceptionally well rounded aircraft.
-    speed: 135
+    speed: 140
     range: 680
     payload: 830 lbs.
   C172: &C172
