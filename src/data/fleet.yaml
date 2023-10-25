@@ -11,11 +11,11 @@ byType:
   C182: &C182
     name: 182 Skylane
     type: C182
-    engine: O-470-U
+    engine: IO-540-1AB1A5
     about: The Cessna 182 Skylane is a four-seat, single-engined airplane.  Its rugged
       airframe makes it an exceptionally well rounded aircraft.
     speed: 135
-    range: 650
+    range: 680
     payload: 830 lbs.
   C172: &C172
     name: 172 Skyhawk
@@ -40,7 +40,7 @@ byPlane:
     type: C182+
     engine: IO-550-D
     range: 600
-  N735LL:
+  N7278X:
     <<: *C182
     year: 99
   N6039N:

@@ -28,7 +28,7 @@ const c172 = {
 };
 
 
-const n735LL = {
+const n7278X = {
     gridLayout: {
         rows: 4,
         cols: 3
@@ -39,7 +39,7 @@ const n735LL = {
     },
     elements: [
         //start
-        { id: 'n735LL', type: 'round-rectangle', label: 'N735LL (Cessna 182)', row: 0, col: 1, ...Color.start},
+        { id: 'n7278X', type: 'round-rectangle', label: 'N7278X (Cessna 182)', row: 0, col: 1, ...Color.start},
         { id: 'ppl', type: 'diamond', label: 'Pilot holds\na Private Pilot\nor more adavanced\ncertificate?', row: 1, col: 1},
         
         //left
@@ -59,7 +59,7 @@ const n735LL = {
         { id: 'yes', type: 'round-rectangle', label: 'Can\nCheckout', row: 3, col: 1, ...Color.yes},
 
         //edges
-        { source: 'n735LL', target: 'ppl', label: '' },
+        { source: 'n7278X', target: 'ppl', label: '' },
         { source: 'ppl', target: '100hrs', label: 'Yes' },
         { source: 'ppl', target: 'chief', label: 'Yes' },
         { source: 'ppl', target: 'no', label: 'No' },
@@ -191,5 +191,5 @@ const c210 = {
     ]
 };
 
-const checkouts = { c172, n735LL, n96418, c210 }
+const checkouts = { c172, n7278X, n96418, c210 }
 export default checkouts;
