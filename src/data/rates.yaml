@@ -1,6 +1,6 @@
 orginization:
   fuelReimbursement: '$5.50'
-  monthlyFixed: '$215'
+  monthlyFixed: '$220'
   sharePrice: '$12,800'
 byType:
   - &C172 100
