@@ -32,11 +32,11 @@ jobs:
     - run: npm run build --if-present
     
  # Only deploy on Node.js 18 and default branch (to avoid multiple deploys)
-    - name: Deploy To GitHub Pages
-    if: matrix.node-version == '18.x' && github.ref == 'refs/heads/main'
-    uses: crazy-max/ghaction-github-pages@v3
-    with:
-      jekyll: false
-      build_dir: dist
-    env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Deploy to GitHub Pages
+      if: matrix.node-version == '18.x' && github.ref == 'refs/heads/main'
+      uses: crazy-max/ghaction-github-pages@v3
+      with:
+        jekyll: false
+        build_dir: dist
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
