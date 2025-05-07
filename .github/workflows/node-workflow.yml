@@ -18,7 +18,7 @@ jobs:
       APP_API: ${{ secrets.APP_API }}
 
     steps:
-    - uses: actions/checkout@v5
+    - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v5
       with:
