@@ -68,7 +68,10 @@ module.exports = function(_env, argv) {
         },
         {
           test: /\.ya?ml$/,
-          use: 'yaml-loader', 
+          use: {
+            loader: 'yaml-loader',
+            options: { asJSON: true }
+          },
           type: 'json'
         }
       ]
@@ -148,7 +151,6 @@ module.exports = function(_env, argv) {
       compress: true,
       historyApiFallback: true,
       open: true,
-      compress: true,
       port: 3000,
     }
   };

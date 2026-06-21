@@ -20,7 +20,7 @@ import WebsiteApi from './services/WebsiteApi';
 import Navigation from './services/Navigation';
 import logo from './images/c7logo.svg';
 
-const makeRoute = (item, i) => <Route key={i} exact={item.path === '/'} path={item.path} element={item.element}/>;
+const makeRoute = (item, i) => <Route key={i} path={item.path} element={item.element}/>;
 
 const links = Navigation.main.map((item, i) => <NavLink key={i} className="nav-item nav-link" to={item.path} data-toggle="collapse" data-target=".navbar-collapse.show">{item.name}</NavLink>);
 const routes = Navigation.main.map(makeRoute);
