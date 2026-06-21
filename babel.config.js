@@ -8,9 +8,6 @@ module.exports = {
       ],
       "@babel/preset-react"
     ],
-    plugins: [
-      "@babel/plugin-transform-runtime"
-    ],
     env: {
       production: {
         only: ["src"],
