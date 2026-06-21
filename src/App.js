@@ -22,7 +22,7 @@ import logo from './images/c7logo.svg';
 
 const makeRoute = (item, i) => <Route key={i} path={item.path} element={item.element}/>;
 
-const links = Navigation.main.map((item, i) => <NavLink key={i} className="nav-item nav-link" to={item.path} data-toggle="collapse" data-target=".navbar-collapse.show">{item.name}</NavLink>);
+const links = Navigation.main.map((item, i) => <NavLink key={i} className="nav-item nav-link" to={item.path} data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">{item.name}</NavLink>);
 const routes = Navigation.main.map(makeRoute);
 
 const PublicFooter = () => {
