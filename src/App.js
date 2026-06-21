@@ -29,7 +29,7 @@ const PublicFooter = () => {
   const location = useLocation();
   const navigate = useNavigate();
   if(location.pathname.toLocaleLowerCase().startsWith('/owner'))
-    return '';
+    return null;
 
   return <footer className="text-center font-weight-bold">
     <p className="pt-3">Any Questions?</p>
