@@ -92,7 +92,8 @@ module.exports = function(_env, argv) {
       new HtmlReplaceWebpackPlugin(envVars),
       new webpack.DefinePlugin({
         "process.env.NODE_ENV": JSON.stringify(isProduction ? "production" : "development"),
-        "process.env.APP_API": JSON.stringify(process.env.APP_API)
+        "process.env.APP_API": JSON.stringify(process.env.APP_API),
+        "process.env.GOOGLE_MAPS_API_KEY": JSON.stringify(process.env.GOOGLE_MAPS_API_KEY)
       }),
       new CopyPlugin({
         patterns: [
