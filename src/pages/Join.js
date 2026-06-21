@@ -123,7 +123,7 @@ const Join = () => {
                     </>}
                     {sentEmail && <div className="text-center">
                             <h3>Thank you for your interest!<br/>Someone will be in contact with you soon!</h3>
-                            <img src={silhouette} style={{width: "144px"}}/>
+                            <img src={silhouette} style={{width: "144px"}} alt="Cessna aircraft silhouette"/>
                         </div>
                     }
                 </div>
