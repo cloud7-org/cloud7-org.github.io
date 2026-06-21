@@ -135,8 +135,8 @@ automated test suite, so the gate is manual verification. Treat the steps below 
 release checklist.
 
 ### 1. Pre-deploy gate (before merge)
-- [ ] `npm ci` (clean install) succeeds; `npm audit` reports 0 vulnerabilities.
-- [ ] `npm run build` is green (only the known large-image asset-size warnings).
+- [x] `npm ci` (clean install) succeeds; `npm audit` reports 0 vulnerabilities.
+- [x] `npm run build` is green (only the known large-image asset-size warnings).
 - [ ] CI workflow secrets/env are present: `GOOGLE_MAPS_API_KEY`, **`GOOGLE_MAPS_MAP_ID`**
       (new — without it the map falls back to the watermarked `DEMO_MAP_ID`), and `APP_API`.
 - [ ] The `GOOGLE_MAPS_API_KEY` is HTTP-referrer-restricted in the GCP console to
