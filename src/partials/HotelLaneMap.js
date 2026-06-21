@@ -10,7 +10,7 @@ const loadGoogleMaps = () => {
     if (!mapsPromise) {
         mapsPromise = new Promise((resolve, reject) => {
             const script = document.createElement('script');
-            script.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_MAPS_API_KEY}&v=weekly`;
+            script.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_MAPS_API_KEY}&libraries=marker&v=weekly`;
             script.async = true;
             script.onload = () => resolve(window.google);
             script.onerror = reject;
@@ -19,6 +19,12 @@ const loadGoogleMaps = () => {
     }
 
     return mapsPromise;
+}
+
+const keypadMarkerContent = () => {
+    const img = document.createElement('img');
+    img.src = keypadIcon;
+    return img;
 }
 
 const HotelLaneMap = () => {
@@ -33,27 +39,30 @@ const HotelLaneMap = () => {
         const map = new google.maps.Map(mapRef.current, {
             zoom: 15,
             center: centerOn,
+            mapId: process.env.GOOGLE_MAPS_MAP_ID || 'DEMO_MAP_ID',
             fullscreenControl: true,
             zoomControl: true,
             streetViewControl: false,
             mapTypeControl: false
         });
 
-        new google.maps.Marker({
+        const {AdvancedMarkerElement} = google.maps.marker;
+
+        new AdvancedMarkerElement({
             position: westGate,
             map,
-            icon: keypadIcon,
+            content: keypadMarkerContent(),
             title: "West Gate"
         });
 
-        new google.maps.Marker({
+        new AdvancedMarkerElement({
             position: northGate,
             map,
-            icon: keypadIcon,
+            content: keypadMarkerContent(),
             title: "North Gate"
         });
 
-        new google.maps.Marker({
+        new AdvancedMarkerElement({
             position: hotelLane,
             map,
             title: "Hotel Lane on Flying Cloud Airport"
