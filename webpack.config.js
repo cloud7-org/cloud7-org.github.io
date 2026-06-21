@@ -47,12 +47,12 @@ module.exports = function(_env, argv) {
         },
         {
           test: /\.(png|jpg|gif)$/i,
-          use: {
-            loader: "url-loader",
-            options: {
-              limit: 8192,
-              name: "static/media/[name].[hash:8].[ext]"
-            }
+          type: 'asset',
+          parser: {
+            dataUrlCondition: { maxSize: 8192 }
+          },
+          generator: {
+            filename: "static/media/[name].[hash:8][ext]"
           }
         },
         {
@@ -61,9 +61,9 @@ module.exports = function(_env, argv) {
         },
         {
           test: /\.(eot|otf|ttf|woff|woff2)$/,
-          loader: require.resolve("file-loader"),
-          options: {
-            name: "static/media/[name].[hash:8].[ext]"
+          type: 'asset/resource',
+          generator: {
+            filename: "static/media/[name].[hash:8][ext]"
           }
         },
         {
