@@ -45,7 +45,7 @@ const App = () => {
     const callback = () => setIsLoggedIn(WebsiteApi.canAccess);
     EventDispatcher.listen(EventDispatcher.LOGGED_IN, callback);
     return () => EventDispatcher.deafen(EventDispatcher.LOGGED_IN, callback);
-  });
+  }, []);
 
   return (
     <Router>
