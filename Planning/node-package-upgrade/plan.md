@@ -126,5 +126,57 @@ rehype-react 8.
 - `React.lazy` routes ARE wrapped in `<Suspense>` (Navigation.js `load()`), so the
   Suspense concern is resolved.
 - There is no automated test suite; validation is manual browser testing.
-</content>
-</invoke>
+
+## Deployment test plan
+
+This repo is the org's GitHub Pages site, so merging to `main` deploys to
+**production (https://www.cloud7.org)** — there is no staging environment and no
+automated test suite, so the gate is manual verification. Treat the steps below as the
+release checklist.
+
+### 1. Pre-deploy gate (before merge)
+- [ ] `npm ci` (clean install) succeeds; `npm audit` reports 0 vulnerabilities.
+- [ ] `npm run build` is green (only the known large-image asset-size warnings).
+- [ ] CI workflow secrets/env are present: `GOOGLE_MAPS_API_KEY`, **`GOOGLE_MAPS_MAP_ID`**
+      (new — without it the map falls back to the watermarked `DEMO_MAP_ID`), and `APP_API`.
+- [ ] The `GOOGLE_MAPS_API_KEY` is HTTP-referrer-restricted in the GCP console to
+      `www.cloud7.org` (the key is public in the bundle).
+
+### 2. Deploy
+- [ ] Merge the PR to `main` and let the CI workflow build + publish to gh-pages
+      (do not run `npm run deploy` by hand from a working tree).
+- [ ] Confirm the deploy action completed green and the CNAME (`www.cloud7.org`) is intact.
+
+### 3. Post-deploy smoke test (on https://www.cloud7.org, not localhost)
+- [ ] Site loads; no console errors on first paint; CSS + images render.
+- [ ] SPA deep-link + refresh works (load `/about` directly → 404.html redirect resolves).
+- [ ] Hard-refresh confirms new hashed bundles are served (not stale cache).
+
+### 4. Targeted regression checks (mapped to what changed)
+- [ ] **Nav links** (About, Photos, Join, FAQ, Owners) each navigate — the regression
+      from the Bootstrap collapse change. Also confirm "Contact Us" → `/join`.
+- [ ] **Mobile nav**: at a narrow width, tapping a link navigates AND closes the menu.
+- [ ] **Viewport**: mobile renders at normal zoom (initial-scale=1) with no horizontal
+      overflow on small screens.
+- [ ] **FAQ checkout shortcodes** render the cytoscape diagrams (rehype-react 8 migration).
+- [ ] **Photos / pano** (three.js 0.184): image loads, drag + wheel-zoom work, colors look
+      right (sRGB default change). Navigate away and back — confirm no duplicate canvas.
+- [ ] **Map page** (AdvancedMarkerElement): map renders, all three markers appear (West/
+      North gate keypad icons + Hotel Lane). Loads only on this page, not site-wide.
+      Confirm no `DEMO_MAP_ID` watermark once `GOOGLE_MAPS_MAP_ID` is set.
+- [ ] **Owner login modal**: Enter submits (onKeyDown), bad login shakes (animate.css),
+      good login navigates to `/owner/files` (exercises wasm `PostHeaders` + RestClient
+      static class fields under the modern browser target).
+- [ ] **Owner area**: file/folder list loads and a file downloads (RestClient `doGet`).
+- [ ] **Social preview**: validate OG/Twitter tags (e.g. share to Slack/iMessage or use a
+      card validator) — title, description, and header image resolve.
+
+### 5. Cross-browser matrix
+Run the smoke + targeted checks on current **Chrome, Edge, Firefox, Safari** (the declared
+browserslist targets — modern output is shipped, so older browsers are explicitly out of
+scope). Include at least one real mobile device/emulator for the nav + viewport checks.
+
+### 6. Rollback
+- If a regression is found post-deploy, revert the merge commit on `main` and re-deploy
+  (gh-pages republishes the prior build). Note `GOOGLE_MAPS_MAP_ID` is additive, so a
+  revert does not require removing the secret.
