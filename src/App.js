@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap.bundle.js';
+import bootstrap from 'bootstrap/dist/js/bootstrap.bundle.js';
 import './App.css'
 import React, {useEffect, useState} from 'react';
 import {
@@ -22,7 +22,16 @@ import logo from './images/c7logo.svg';
 
 const makeRoute = (item, i) => <Route key={i} path={item.path} element={item.element}/>;
 
-const links = Navigation.main.map((item, i) => <NavLink key={i} className="nav-item nav-link" to={item.path} data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">{item.name}</NavLink>);
+// Collapse the mobile navbar when a link is tapped. We do this programmatically
+// instead of via Bootstrap's data-bs-toggle, because that data API calls
+// preventDefault() on the click and would block React Router navigation.
+const collapseNav = () => {
+  const nav = document.getElementById('navbarNav');
+  if (nav && nav.classList.contains('show'))
+    bootstrap.Collapse.getOrCreateInstance(nav).hide();
+};
+
+const links = Navigation.main.map((item, i) => <NavLink key={i} className="nav-item nav-link" to={item.path} onClick={collapseNav}>{item.name}</NavLink>);
 const routes = Navigation.main.map(makeRoute);
 
 const PublicFooter = () => {
