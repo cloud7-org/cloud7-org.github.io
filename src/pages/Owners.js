@@ -50,7 +50,7 @@ const Owners = () => {
             <ImageBox image="panel">
                 <HeaderText
                     title="Owners"
-                    detail="Public resources for your next flight, and tools to watch our the progress of the flights in progress by our aircraft."
+                    detail="Public resources for your next flight, and tools to watch the progress of flights by our aircraft."
                 />   
             </ImageBox>
         </div>

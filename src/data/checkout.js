@@ -15,7 +15,7 @@ const c172 = {
     },
     elements: [
         { id: 'c172', type: 'round-rectangle', label: 'Cessna\n172', row: 0, col: 1, ...Color.start},
-        { id: 'ppl', type: 'diamond', label: 'Pilot holds\na Private Pilot\nor more adavanced\ncertificate?', row: 1, col: 1},
+        { id: 'ppl', type: 'diamond', label: 'Pilot holds\na Private Pilot\nor more advanced\ncertificate?', row: 1, col: 1},
         { id: 'student', type: 'diamond', label: 'Is the pilot\na Student\nOwner?', row: 2, col: 1},
         { id: 'no', type: 'round-rectangle', label: 'Cannot\nCheckout', row: 2, col: 2, ...Color.no},
         { id: 'yes', type: 'round-rectangle', label: 'Can\nCheckout', row: 2, col: 0, ...Color.yes},
@@ -40,7 +40,7 @@ const n7278X = {
     elements: [
         //start
         { id: 'n7278X', type: 'round-rectangle', label: 'N7278X (Cessna 182)', row: 0, col: 1, ...Color.start},
-        { id: 'ppl', type: 'diamond', label: 'Pilot holds\na Private Pilot\nor more adavanced\ncertificate?', row: 1, col: 1},
+        { id: 'ppl', type: 'diamond', label: 'Pilot holds\na Private Pilot\nor more advanced\ncertificate?', row: 1, col: 1},
         
         //left
         { id: '100hrs', type: 'rectangle', label: 'Has ≥ 100Hrs PIC', row: 1, col: 0 },
@@ -86,7 +86,7 @@ const n96418 = {
     elements: [
         //start
         { id: 'n96418', type: 'round-rectangle', label: 'N96418 (Cessna 182)', row: 0, col: 0, ...Color.start},
-        { id: 'ppl', type: 'diamond', label: 'Pilot holds\na Private Pilot\nor more adavanced\ncertificate?', row: 1, col: 1},
+        { id: 'ppl', type: 'diamond', label: 'Pilot holds\na Private Pilot\nor more advanced\ncertificate?', row: 1, col: 1},
         
         //left
         { id: '125hrs', type: 'rectangle', label: 'Has ≥ 125Hrs PIC', row: 1, col: 0 },

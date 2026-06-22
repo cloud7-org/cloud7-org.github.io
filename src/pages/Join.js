@@ -130,7 +130,7 @@ const Join = () => {
                 <div className="bg-white col-12 col-md-6 px-2">
                     <HorizontalHeadingRule title="Testimonials"/>
                     <div className="row no-gutters">
-                        {joinData.testamonials.map((testimonial, i) => (<div key={i} className="col-12 col-sm-6">
+                        {joinData.testimonials.map((testimonial, i) => (<div key={i} className="col-12 col-sm-6">
                             <div className="m-1 p-1 bg-light">
                                 <p className="drop-cap">{testimonial.text} —&nbsp;{testimonial.from.replace(' ', '\u00A0')}</p>
                             </div>

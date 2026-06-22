@@ -10,11 +10,11 @@ certificates:
     mei: MEI
 ratings:
   glider: Glider
-  intrument: Instrument
+  instrument: Instrument
   multi-engine-land: MEL
   single-engine-sea: SES
   multi-engine-sea: MES
-testamonials:
+testimonials:
 - from: John O'Shaughnessy
   text: Cloud 7 is a huge part of my life. Having a cost effective fleet of six aircraft
     with a range of capabilities at my disposal can’t be beat. Flying puts a smile

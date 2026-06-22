@@ -1,7 +1,7 @@
 {
   "name": "cloud-7-website",
   "version": "1.0.0",
-  "description": "Homepage for Twin Cities Cloud 7",
+  "description": "Homepage for Twin City Cloud 7",
   "homepage": "https://www.cloud7.org",
   "private": false,
   "scripts": {
