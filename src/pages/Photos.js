@@ -9,7 +9,7 @@ const Photos = () => {
             <FieldSet title="Garmin G3Xs are in our 182s and 210s"/>  
         </PanoImage>
         <ImageBox image="hangar">
-            <FieldSet title="N54589 in our Maintance Hangar"/>  
+            <FieldSet title="N54589 in our Maintenance Hangar"/>
         </ImageBox>
         <ImageBox image="gtn650">
             <FieldSet title="A GTN650 is in all our Aircraft"/>  

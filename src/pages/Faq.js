@@ -19,7 +19,7 @@ const Faq = () => {
             <ImageBox image="N735LL">
                 <HeaderText
                     title="FAQ"
-                    detail="Frequenty Asked Questions"
+                    detail="Frequently Asked Questions"
                 />   
             </ImageBox>
         </div>
