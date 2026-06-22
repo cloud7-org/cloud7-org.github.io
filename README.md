@@ -1,1 +1,1 @@
-# The home of Twin Cities Cloud 7 web site.
+# The home of Twin City Cloud 7 web site.
