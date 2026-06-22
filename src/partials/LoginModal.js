@@ -43,7 +43,7 @@ const LoginModal = (props) => {
     }
 
     const submitOnEnter = (e) => {
-        if (e.keyCode === 13 || e.which === 13)
+        if (e.key === 'Enter')
             login();
     }
 
@@ -74,7 +74,7 @@ const LoginModal = (props) => {
                         </div>
                         <div className="form-group">
                             <label htmlFor="password">Password</label>
-                            <input type="password" className="form-control" id="login-password" name="password" placeholder="Password" autoComplete="off" onKeyPress={submitOnEnter}/>
+                            <input type="password" className="form-control" id="login-password" name="password" placeholder="Password" autoComplete="off" onKeyDown={submitOnEnter}/>
                         </div>
                     </form>
                 </div>

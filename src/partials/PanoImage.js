@@ -142,7 +142,7 @@ const PanoImage = (props) => {
             eventsAddedTo.removeEventListener( 'wheel', onMouseWheel );
             EventDispatcher.deafen(EventDispatcher.MEDIA_CHANGED, onResize);
         };
-      });
+      }, []);
 
     return (<div className="position-relative" style={knownPictures[image].style}>
         <div ref={containerRef} className="w-100 h-100"></div>

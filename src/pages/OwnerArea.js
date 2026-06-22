@@ -24,7 +24,7 @@ const sortFn = (l, r) => {
 
 const Icon = (props) => {
     const {svg} = props;
-    return <img src={svg} style={{height: "1em"}}/>
+    return <img src={svg} style={{height: "1em"}} alt=""/>
 }
 
 const File = (props) =>{

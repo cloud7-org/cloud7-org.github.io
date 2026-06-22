@@ -1,4 +1,5 @@
 import React from 'react';
+import {Fragment, jsx, jsxs} from 'react/jsx-runtime'
 import {unified} from 'unified'
 import {visit} from 'unist-util-visit'
 import gfm from 'remark-gfm'
@@ -19,6 +20,8 @@ function processCheckout() {
             if(result && result.length === 2){
                 node.type = 'element';
                 node.tagName = 'checkout';
+                node.properties = {};
+                node.children = [];
                 node.value = result[1];
             }
         });
@@ -31,9 +34,11 @@ function processCheckout() {
     .use(remarkRehype)
     .use(processCheckout)
     .use(rehypeReact, {
-        components, 
-        passNode: true,
-        createElement: React.createElement
+        Fragment,
+        jsx,
+        jsxs,
+        components,
+        passNode: true
     });
 
 const Markdown = (props) => {

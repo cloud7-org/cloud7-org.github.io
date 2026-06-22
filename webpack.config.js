@@ -47,12 +47,12 @@ module.exports = function(_env, argv) {
         },
         {
           test: /\.(png|jpg|gif)$/i,
-          use: {
-            loader: "url-loader",
-            options: {
-              limit: 8192,
-              name: "static/media/[name].[hash:8].[ext]"
-            }
+          type: 'asset',
+          parser: {
+            dataUrlCondition: { maxSize: 8192 }
+          },
+          generator: {
+            filename: "static/media/[name].[hash:8][ext]"
           }
         },
         {
@@ -61,14 +61,17 @@ module.exports = function(_env, argv) {
         },
         {
           test: /\.(eot|otf|ttf|woff|woff2)$/,
-          loader: require.resolve("file-loader"),
-          options: {
-            name: "static/media/[name].[hash:8].[ext]"
+          type: 'asset/resource',
+          generator: {
+            filename: "static/media/[name].[hash:8][ext]"
           }
         },
         {
           test: /\.ya?ml$/,
-          use: 'yaml-loader', 
+          use: {
+            loader: 'yaml-loader',
+            options: { asJSON: true }
+          },
           type: 'json'
         }
       ]
@@ -89,7 +92,9 @@ module.exports = function(_env, argv) {
       new HtmlReplaceWebpackPlugin(envVars),
       new webpack.DefinePlugin({
         "process.env.NODE_ENV": JSON.stringify(isProduction ? "production" : "development"),
-        "process.env.APP_API": JSON.stringify(process.env.APP_API)
+        "process.env.APP_API": JSON.stringify(process.env.APP_API),
+        "process.env.GOOGLE_MAPS_API_KEY": JSON.stringify(process.env.GOOGLE_MAPS_API_KEY),
+        "process.env.GOOGLE_MAPS_MAP_ID": JSON.stringify(process.env.GOOGLE_MAPS_MAP_ID)
       }),
       new CopyPlugin({
         patterns: [
@@ -148,7 +153,6 @@ module.exports = function(_env, argv) {
       compress: true,
       historyApiFallback: true,
       open: true,
-      compress: true,
       port: 3000,
     }
   };
