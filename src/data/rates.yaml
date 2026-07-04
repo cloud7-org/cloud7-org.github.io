@@ -1,12 +1,12 @@
 organization:
-  fuelReimbursement: '$6.65'
+  fuelReimbursement: '$6.15'
   monthlyFixed: '$220'
   sharePrice: '$13,800'
 byType:
-  - &C172 116
-  - &C182 174
-  - &C182+ 200
-  - &C210 220
+  - &C172 112
+  - &C182 168
+  - &C182+ 193
+  - &C210 213
 byPlane:
   N65045: *C172
   N54589: *C172
